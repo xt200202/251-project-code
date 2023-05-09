@@ -61,7 +61,7 @@ plt.show()
 for c in damping_coefficients:
     theta_0 = 1.0
     theta, phi = euler_method(theta_0, c)
-    plt.plot(theta, phi, label=f"Damping Coefficient = {c}")
+    plt.plot(theta, phi, label=f"Damping Coefficient = {c} kg/s")
 
 plt.xlabel("Swing Angle (θ) [radians]")
 plt.ylabel("Angular Velocity (dθ/dt) [rad/s]")
