@@ -39,7 +39,7 @@ def linear_pendulum_analytical(t, initial_angle):
     omega = np.sqrt((3*g)/(2*L))
     return initial_angle * np.cos(omega * t),tau
 
-# plot: Numerical vs Analytical solution
+# Plot: Comparison of numerical and analytical solutions for different initial conditions
 dt = 0.0001 
 initial_angles = [0.1, 1] #for two inital conditions
 
