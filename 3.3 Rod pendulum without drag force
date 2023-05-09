@@ -40,16 +40,16 @@ def linear_pendulum_analytical(t, initial_angle):
     return initial_angle * np.cos(omega * t),tau
 
 # plot: Numerical vs Analytical solution
-dt = 0.0001
-initial_angles = [0.1, 1]
+dt = 0.0001 
+initial_angles = [0.1, 1] #for two inital conditions
 
 plt.figure()
 for angle in initial_angles:
     t_dim, theta_vals, tau = euler_method_pendulum(dt, angle, t_end)
-    plt.plot(t_dim, theta_vals, label=f"Numerical, θ₀ = {angle}")
+    plt.plot(t_dim, theta_vals, label=f"Numerical, θ₀ = {angle} rad")
 
     theta_analytical, tau = linear_pendulum_analytical(t_dim * tau, angle)
-    plt.plot(t_dim, theta_analytical, linestyle='--', label=f"Analytical, θ₀ = {angle}")
+    plt.plot(t_dim, theta_analytical, linestyle='--', label=f"Analytical, θ₀ = {angle} rad")
 
 plt.xlabel("Dimensionless Time ($t/\\tau$)")
 plt.ylabel("Swing Angle (radians)")
