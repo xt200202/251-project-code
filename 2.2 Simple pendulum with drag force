@@ -25,7 +25,7 @@ time = np.arange(0, t_max, dt)
 theta_0_values = [0.1, 1.0]
 damping_coefficients = [0, 0.5, 1.0]
 
-# Euler method to solve the ODE(Rod pendulum with drag force)
+# Euler method to solve the ODE(simple pendulum with drag force)
 def euler_method(theta_0, damping_coefficient):
     theta = np.zeros(len(time))
     phi = np.zeros(len(time))
@@ -38,7 +38,7 @@ def euler_method(theta_0, damping_coefficient):
 
     return theta, phi
 
-# Analytical solution of the problem
+# Analytical solution of simple pendulum with drag force
 def analytical_solution(theta_0):
     return np.exp(alpha * time) * (theta_0 * np.cos(omega * time) - (alpha / omega) * theta_0 * np.sin(omega * time))
 
