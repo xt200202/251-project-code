@@ -54,7 +54,7 @@ plt.ylabel("Swing Angle (radians)")
 plt.legend()
 plt.show()
 
-# Second plot: Numerical vs Analytical solution
+# Second plot: Comparison of numerical and analytical solutions for different initial conditions
 dt = 0.0001
 initial_angles = [0.1, 1]
 
