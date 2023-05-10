@@ -14,7 +14,7 @@ l = 1.0  # m
 dtheta_0_dt = 0.0  # rad/s
 m = 1.0  # kg
 c = 0.5  # kg/s
-tau_drag = 4 * np.pi / np.sqrt((6 * g / l) - (c ** 2) / (m ** 2)) # s oscillation period of the rod pendulum with drag force
+tau_drag = 2 * np.pi / np.sqrt((g / l) - (c ** 2) / 4*(m ** 2)) # s oscillation period of the simple pendulum with drag force
 
 # Time settings
 t_max = tau_drag*5 # s maximum t 
